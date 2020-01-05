@@ -1,7 +1,7 @@
 # application-form
 A content rich application form template for institutions and organisations.
 
-https://pranavks.github.io/application-form
+<a href="https://pranavks.github.io/application-form" target="_blank">View live website.</a>
 
 Made with HTML, CSS, Sass, Bootstrap, JavaScript & jQuery.
 
