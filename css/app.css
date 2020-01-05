@@ -1,0 +1,373 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+}
+
+.hide {
+  display: none;
+}
+
+.main-heading {
+  color: #323232;
+  font-size: 22.4px;
+  letter-spacing: 2px;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+.colored-heading {
+  color: #00b3ff;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sub-heading {
+  font-size: 13px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #b4b4b4 !important;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #b4b4b4 !important;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: #b4b4b4 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #b4b4b4 !important;
+}
+
+select:required:invalid {
+  color: #b4b4b4 !important;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+option {
+  color: initial;
+}
+
+input[type='file'] {
+  font-size: 13px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+textarea[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus,
+.form-control:focus,
+.btn:focus,
+.btn:active {
+  border-color: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+textarea {
+  border: 1px solid #ced4da;
+}
+
+.button-custom {
+  color: #fff;
+  background-color: #24A9E1;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 9px 14px;
+  text-transform: uppercase;
+}
+
+.button-custom:hover {
+  background-color: #00b3ff;
+}
+
+.button-custom-lg {
+  color: #fff;
+  background-color: #0085be;
+  font-family: "Raleway", sans-serif;
+  font-size: 19.2px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 12px 20px;
+  text-transform: uppercase;
+}
+
+.button-custom-lg:hover {
+  background-color: #00b3ff;
+}
+
+aside {
+  font-size: 12px;
+  height: 100%;
+  width: 225px;
+  background-color: #0085be;
+  padding: 10px;
+  color: white;
+  position: fixed;
+}
+
+aside .wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 0;
+  right: 100%;
+  top: 0;
+  bottom: 100%;
+  height: 100vh;
+  margin: -10px;
+}
+
+aside .text1 {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+aside nav a {
+  display: block;
+  padding: 10px 8px;
+  color: white;
+  margin-top: 8px;
+}
+
+aside nav a:hover {
+  text-decoration: none;
+  color: #beedff;
+}
+
+aside nav a span {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: .5px 6px;
+}
+
+aside nav .active-nav {
+  background-color: #009ee2;
+  border: 1px solid #42c6ff;
+}
+
+aside .progress {
+  height: 25px;
+  width: 90%;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 88px;
+  left: 4.8%;
+}
+
+aside .progress .progress-bar {
+  background-color: #009ee2;
+  padding: 10px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #23282D;
+}
+
+aside #log-out {
+  background-color: #009ee2;
+  border: 0;
+  color: white;
+  padding: 10px 15px;
+  width: 90%;
+  position: absolute;
+  bottom: 30px;
+  left: 4.8%;
+}
+
+aside #log-out:hover {
+  background-color: #20bcff;
+}
+
+#hamburger-div {
+  background-color: #0085be;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  display: none;
+  height: 40px;
+}
+
+#hamburger-div .wrapper-min {
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 0;
+  right: 100%;
+  top: 0;
+  bottom: 100%;
+  height: 100%;
+}
+
+#hamburger-div i {
+  padding: 11px 11px 0 0;
+  color: white;
+  font-size: 20px;
+}
+
+.main-section {
+  height: 100%;
+  margin-left: 225px;
+  width: 100%;
+  padding: 60px 40px 40px 40px;
+}
+
+.main-section .dynamic-table table {
+  border-collapse: collapse;
+}
+
+.main-section .dynamic-table table td {
+  border: 0;
+  padding: 0;
+}
+
+.main-section .dynamic-table table input,
+.main-section .dynamic-table table button {
+  border-radius: 0;
+  border: 1px solid #ced4da;
+}
+
+.main-section .dynamic-table .btn-outline-primary {
+  color: #00b3ff;
+  border: 1px solid #00b3ff;
+}
+
+.main-section .dynamic-table .btn-outline-primary:hover {
+  color: #fff;
+  background-color: #00b3ff !important;
+}
+
+.main-section .dynamic-table .btn-outline-primary .fa-plus:before {
+  font-size: 13px !important;
+}
+
+#home-page {
+  height: 100vh;
+}
+
+#home-page .position-absolute {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#home-page h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 44.8px;
+}
+
+#home-page .btn {
+  font-family: Raleway, sans-serif;
+}
+
+@media (max-width: 577px) {
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #hamburger-div {
+    display: block;
+  }
+  aside {
+    width: 100%;
+    z-index: 99;
+  }
+  aside .wrapper {
+    height: 100%;
+  }
+  aside .logo {
+    display: block;
+    margin-top: 30px;
+  }
+  aside .text1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  aside .progress {
+    position: static;
+    margin: 20px auto;
+  }
+  aside #log-out {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+  }
+  .main-section {
+    margin-left: 0px;
+  }
+  .dynamic-table table,
+  .dynamic-table table td,
+  .dynamic-table table tr,
+  .dynamic-table table th {
+    display: block;
+    text-align: left;
+  }
+  .dynamic-table table th,
+  .dynamic-table table td {
+    margin: 0;
+  }
+  .dynamic-table table td {
+    list-style: square;
+    display: list-item;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .dynamic-table table thead {
+    display: none;
+  }
+  .dynamic-table table {
+    text-align: center;
+  }
+  .dynamic-table table input,
+  .dynamic-table table select {
+    width: 290px !important;
+  }
+}
+
+@media (max-width: 369px) {
+  .dynamic-table table {
+    text-align: center;
+  }
+  .dynamic-table table input,
+  .dynamic-table table select {
+    width: 250px !important;
+  }
+}
+/*# sourceMappingURL=app.css.map */

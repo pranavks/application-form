@@ -1,0 +1,99 @@
+$primary: #0085be;
+$secondary: #24A9E1;
+$background: #f8f8f8;
+$hcolor: rgb(0, 179, 255);
+
+$Raleway: 'Raleway',
+sans-serif;
+$Poppins: 'Poppins',
+sans-serif;
+
+body {
+    font-family: $Poppins;
+    background-color: $background;
+}
+
+.hide {
+    display: none;
+}
+
+.main-heading {
+    color: #323232;
+    font-size: 22.4px;
+    letter-spacing: 2px;
+    line-height: 28px;
+    margin-bottom: 40px;
+}
+
+.colored-heading {
+    color: $hcolor;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sub-heading {
+    font-size: 13px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgb(180, 180, 180) !important;
+    // font-size: 13px;
+}
+
+// select grey color
+select:required:invalid {
+    color: rgb(180, 180, 180) !important;
+    // font-size: 13px;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: initial;
+}
+
+input[type='file'] {
+    font-size: 13px;
+}
+
+// remove bootstrap outline
+textarea:focus,
+input[type="text"]:focus,
+textarea[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus,
+.form-control:focus,
+.btn:focus,
+.btn:active {
+    border-color: none;
+    box-shadow: none;
+    outline: none;
+}
+
+textarea {
+    border: 1px solid #ced4da;
+}

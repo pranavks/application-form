@@ -1,0 +1,181 @@
+@import "base";
+@import "module";
+@import "sidebar";
+
+#hamburger-div {
+  background-color: $primary;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  display: none;
+  height: 40px;
+
+  .wrapper-min {
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0;
+    right: 100%;
+    top: 0;
+    bottom: 100%;
+    height: 100%;
+  }
+
+  i {
+    padding: 11px 11px 0 0;
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.main-section {
+  height: 100%;
+  margin-left: 225px;
+  width: 100%;
+  padding: 60px 40px 40px 40px;
+
+  .dynamic-table {
+    table {
+      border-collapse: collapse;
+
+      td {
+        border: 0;
+        padding: 0;
+      }
+
+      input,
+      button {
+        border-radius: 0;
+        border: 1px solid #ced4da;
+      }
+    }
+
+    .btn-outline-primary {
+      color: $hcolor;
+      border: 1px solid $hcolor;
+
+      &:hover {
+        color: #fff;
+        background-color: $hcolor !important;
+      }
+
+      .fa-plus:before {
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+
+#home-page {
+  height: 100vh;
+
+  .position-absolute {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h3 {
+    font-family: $Raleway;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 44.8px;
+  }
+
+  .btn {
+    font-family: Raleway, sans-serif;
+  }
+}
+
+@media (max-width: 577px) {
+  body {
+    flex-direction: column;
+  }
+
+  #hamburger-div {
+    display: block;
+  }
+
+  aside {
+    width: 100%;
+    z-index: 99;
+
+    .wrapper {
+      height: 100%;
+    }
+
+    .logo {
+      display: block;
+      margin-top: 30px;
+    }
+
+    .text1 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .progress {
+      position: static;
+      margin: 20px auto;
+    }
+
+    #log-out {
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      right: 100%;
+    }
+  }
+
+  .main-section {
+    margin-left: 0px;
+  }
+
+  // dynamic table adjustments
+  .dynamic-table {
+    table,
+    table td,
+    table tr,
+    table th {
+      display: block;
+      text-align: left;
+    }
+
+    table th,
+    table td {
+      margin: 0;
+    }
+
+    table td {
+      list-style: square;
+      display: list-item;
+      padding-left: 0;
+      list-style-type: none;
+    }
+
+    table thead {
+      display: none;
+    }
+
+    table {
+      text-align: center;
+
+      input,
+      select {
+        width: 290px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 369px) {
+  .dynamic-table {
+    table {
+      text-align: center;
+
+      input,
+      select {
+        width: 250px !important;
+      }
+    }
+  }
+}

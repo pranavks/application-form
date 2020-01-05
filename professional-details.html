@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/datepicker.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>Application Form</title>
+  </head>
+  <body class="d-flex">
+    <div id="hamburger-div" class="clearfix">
+      <div class="wrapper-min">
+        &nbsp;
+        <i class="fas fa-bars float-right" onclick="hideAside();"></i>
+      </div>
+    </div>
+    <aside id="aside-div">
+      <div class="wrapper">
+        <a href="#" class="logo">
+          <img
+            src="images/dummy-logo.png"
+            alt="3GIRPS"
+            class="d-block m-auto py-4"
+            width="150px"
+          />
+        </a>
+
+        <p class="text-light text-center text1">
+          Application ID : TLF/2020/1389
+        </p>
+
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="personal-details.html"
+            ><span>1</span> &nbsp;PERSONAL DETAILS</a
+          >
+          <a href="education-details.html"
+            ><span>2</span> &nbsp;EDUCATION DETAILS</a
+          >
+          <a href="professional-details.html" class="active-nav"
+            ><span>3</span> &nbsp;PROFESSIONAL DETAILS</a
+          >
+          <a href="feedback.html"><span>4</span> &nbsp;FEEDBACK</a>
+        </nav>
+
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 11%"
+            aria-valuenow="11"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            11%
+          </div>
+        </div>
+        <button id="log-out">
+          <i class="fas fa-sign-out-alt"></i>&ensp;LOGOUT
+        </button>
+      </div>
+    </aside>
+
+    <section id="professional-details-page" class="main-section">
+      <h6 class="main-heading">PROFESSIONAL DETAILS</h6>
+      <div class="work-exp-div">
+        <h6 class="colored-heading">WORK EXPERIENCE</h6>
+        <div class="row ml-0">
+          <h6 class="sub-heading">DO YOU HAVE ANY WORK EXPERIENCE ? *</h6>
+          <div class="form-group">
+            <input
+              type="radio"
+              class="ml-2"
+              name="yesOrNoWork"
+              id="yesWork"
+              onclick="show1();"
+            />
+            <label for="yesWork">Yes</label>
+
+            <input
+              type="radio"
+              class="ml-2"
+              name="yesOrNoWork"
+              id="noWork"
+              checked
+              onclick="show2();"
+            />
+            <label for="noWork">No</label>
+          </div>
+
+          <div id="hidden-work-exp-div" class="hide">
+            <div class="dynamic-table row">
+              <div class="col clearfix">
+                <table id="list7" class="table col-sm-12">
+                  <!-- <thead>
+                          <tr><th>Name</th><th>Mail</th><th></th></tr>
+                        </thead> -->
+                  <tbody>
+                    <tr class="list7_var">
+                      <td>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="list7-mail_0"
+                          placeholder="Select from date"
+                          data-toggle="datepicker"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="list7-mail_1"
+                          placeholder="Select end date"
+                          data-toggle="datepicker"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="list7-mail_2"
+                          placeholder="Organization"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="list7-mail_3"
+                          placeholder="Designation"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="list7-mail_4"
+                          placeholder="Recognitions"
+                        />
+                      </td>
+                      <td class="del7-area">
+                        <button
+                          class="list7_del btn btn-block text-danger bg-white"
+                        >
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button class="list7_add btn btn-outline-primary float-right">
+                  <i class="fas fa-plus mr-2"></i>Add
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="lessons-learned"
+                  >WHAT ARE SOME OF THE LESSONS YOU HAVE LEARNED IN THE TIME YOU
+                  HAVE WORKED SO FAR ? *</label
+                >
+                <textarea
+                  name="lessons-learned"
+                  id="lessons-learned"
+                  style="width: 100%"
+                  rows="5"
+                  placeholder="Provide details..."
+                  data-length="2500"
+                  class="char-textarea"
+                ></textarea>
+                <small
+                  >Characters: <span class="char-count">0</span> / 2500</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prof-profiles-div">
+        <h6 class="colored-heading">PROFESSIONAL PROFILES</h6>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="linkedin-prof">LINKEDIN PROFILE</label>
+              <input
+                type="text"
+                name="linkedin-prof"
+                id="linkedin-prof"
+                placeholder="Enter your Linkedin profile URL"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="github-prof">GITHUB PROFILE</label>
+              <input
+                type="text"
+                name="github-prof"
+                id="github-prof"
+                placeholder="Enter your Linkedin profile URL"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prev-next-buttons clearfix mt-5">
+        <a
+          href="education-details.html"
+          class="btn button-custom text-white float-left"
+          ><i class="fas fa-long-arrow-alt-left"></i> PREVIOUS
+        </a>
+        <a href="feedback.html" class="btn button-custom text-white float-right"
+          >SAVE & NEXT <i class="fas fa-long-arrow-alt-right"></i>
+        </a>
+      </div>
+    </section>
+    <!--
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+     -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- dynamic table -->
+    <script src="js/jquery.add-input-area.min.js"></script>
+    <script>
+      $(function() {
+        $("#list7").addInputArea();
+      });
+    </script>
+
+    <!-- show and hide div on radio buttons -->
+    <script>
+      function show1() {
+        document.getElementById("hidden-work-exp-div").style.display = "block";
+      }
+      function show2() {
+        document.getElementById("hidden-work-exp-div").style.display = "none";
+      }
+    </script>
+
+    <!-- textarea characters count -->
+    <script>
+      $(".char-textarea").on("keyup", function(event) {
+        checkTextAreaMaxLength(this, event);
+      });
+
+      /*
+Checks the MaxLength of the Textarea
+-----------------------------------------------------
+@prerequisite:	textBox = textarea dom element
+				e = textarea event
+                length = Max length of characters
+*/
+      function checkTextAreaMaxLength(textBox, e) {
+        var maxLength = parseInt($(textBox).data("length"));
+
+        if (!checkSpecialKeys(e)) {
+          if (textBox.value.length > maxLength - 1)
+            textBox.value = textBox.value.substring(0, maxLength);
+        }
+        $(".char-count").html(textBox.value.length);
+
+        return true;
+      }
+      /*
+Checks if the keyCode pressed is inside special chars
+-------------------------------------------------------
+@prerequisite:	e = e.keyCode object for the key pressed
+*/
+      function checkSpecialKeys(e) {
+        if (
+          e.keyCode != 8 &&
+          e.keyCode != 46 &&
+          e.keyCode != 37 &&
+          e.keyCode != 38 &&
+          e.keyCode != 39 &&
+          e.keyCode != 40
+        )
+          return false;
+        else return true;
+      }
+    </script>
+
+    <!-- datepicker -->
+    <script src="js/datepicker.min.js"></script>
+    <script>
+      $('[data-toggle="datepicker"]').datepicker({
+        format: "dd/mm/yyyy"
+      });
+    </script>
+
+    <!-- Hide and show aside on hamburger -->
+    <script>
+      function hideAside() {
+        document.getElementById("aside-div").classList.toggle("hide");
+      }
+    </script>
+
+    <!-- media query js -->
+    <script>
+      function myFunction(x) {
+        if (x.matches) {
+          // If media query matches
+          document.getElementById("aside-div").classList.remove("hide");
+        } else {
+          document.getElementById("aside-div").classList.add("hide");
+        }
+      }
+
+      var x = window.matchMedia("(min-width: 578px)");
+      myFunction(x); // Call listener function at      run time
+      x.addListener(myFunction); // Attach       listener function on state changes
+    </script>
+  </body>
+</html>
